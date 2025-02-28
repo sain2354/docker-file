@@ -11,6 +11,11 @@ permissions:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    environment: GHCR_PAT
+
 
     steps:
       - name: Checkout repository
